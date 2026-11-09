@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gloria Masika | Mon Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f6fb;
+            color: #222;
+        }
+
+        header {
+            background: #101c3a;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            color: #48d6c5;
+            font-size: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #48d6c5;
+        }
+
+        .hero {
+            min-height: 85vh;
+            background: linear-gradient(135deg, #101c3a, #174c75);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content h1 span {
+            color: #48d6c5;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 13px 30px;
+            background: #48d6c5;
+            color: #101c3a;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: translateY(-4px);
+        }
+
+        section {
+            padding: 70px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            color: #101c3a;
+            margin-bottom: 35px;
+        }
+
+        .about {
+            background: white;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 2;
+            font-size: 17px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #174c75;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.7;
+        }
+
+        .objectifs {
+            background: #eaf0f8;
+            text-align: center;
+        }
+
+        .objectifs p {
+            max-width: 750px;
+            margin: auto;
+            line-height: 2;
+            font-size: 17px;
+        }
+
+        footer {
+            background: #101c3a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer span {
+            color: #48d6c5;
+        }
+
+        @media(max-width: 600px) {
+            .hero-content h1 {
+                font-size: 34px;
+            }
+
+            header {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            section {
+                padding: 50px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header>
+        <h2>Gloria Masika</h2>
+
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À propos</a>
+            <a href="#passions">Passions</a>
+            <a href="#objectifs">Objectifs</a>
+        </nav>
+    </header>
+
+    <!-- ACCUEIL -->
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <h1>Bienvenue chez <span>Gloria Masika</span></h1>
+
+            <p>
+                Étudiante à l'Université Adventiste de Butembo (UAC),
+                passionnée par l'informatique, la connaissance
+                et le développement personnel.
+            </p>
+
+            <a href="#apropos" class="btn">Découvrir mon univers</a>
+        </div>
+    </section>
+
+    <!-- A PROPOS -->
+    <section class="about" id="apropos">
+        <h2 class="section-title">Qui suis-je ?</h2>
+
+        <p>
+            Je m'appelle <strong>Gloria Masika</strong>.
+            Je suis une jeune étudiante habitant la ville de
+            <strong>Butembo</strong>, en République démocratique du Congo.
+
+            Je poursuis mes études à l'
+            <strong>Université Adventiste de Butembo (UAC)</strong>.
+
+            Je suis une personne ambitieuse, curieuse et déterminée.
+            J'aime apprendre de nouvelles choses, découvrir les
+            nouvelles technologies et développer mes compétences.
+
+            Je crois que l'éducation, la persévérance et la foi
+            sont des clés importantes pour construire un bel avenir.
+        </p>
+    </section>
+
+    <!-- PASSIONS -->
+    <section id="passions">
+        <h2 class="section-title">Mes passions</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Informatique</h3>
+                <p>
+                    Je suis passionnée par l'informatique,
+                    la programmation et les nouvelles technologies.
+                    J'aime apprendre et créer des solutions numériques.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎵</div>
+                <h3>Chant</h3>
+                <p>
+                    J'aime le chant, particulièrement les chants
+                    catholiques, qui occupent une place importante
+                    dans mes centres d'intérêt.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📚</div>
+                <h3>Apprentissage</h3>
+                <p>
+                    J'aime acquérir de nouvelles connaissances,
+                    développer mes capacités et relever
+                    de nouveaux défis.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- OBJECTIFS -->
+    <section class="objectifs" id="objectifs">
+        <h2 class="section-title">Mes ambitions</h2>
+
+        <p>
+            Mon objectif est de devenir une femme compétente,
+            indépendante et épanouie.
+
+            Je souhaite approfondir mes connaissances en informatique,
+            participer à des projets innovants et utiliser mes
+            compétences pour apporter une contribution positive
+            à ma communauté.
+
+            Je suis convaincue que chaque petit effort d'aujourd'hui
+            construit les grandes réussites de demain.
+        </p>
+
+        <a href="#accueil" class="btn">Retour en haut ↑</a>
+    </section>
+
+    <!-- PIED DE PAGE -->
+    <footer>
+        <p>
+            © 2026 <span>Gloria Masika</span> |
+            Tous droits réservés.
+        </p>
+
+        <p>Créé avec passion et ambition ❤️</p>
+    </footer>
+
+</body>
+</html>
