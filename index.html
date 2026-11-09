@@ -4,7 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gloria Masika | Mon Portfolio</title>
+/* GALERIE PHOTOS */
 
+.galerie {
+    background: #f4f6fb;
+    text-align: center;
+}
+
+.galerie-intro {
+    margin-bottom: 35px;
+    font-size: 17px;
+    color: #555;
+}
+
+.galerie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.photo-card {
+    background: white;
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+.photo-card:hover {
+    transform: translateY(-10px);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.photo-card h3 {
+    margin-top: 15px;
+    color: #174c75;
+}
     <style>
         * 
         {
@@ -56,15 +99,42 @@
         }
 
         .hero {
-            min-height: 85vh;
-            background: linear-gradient(135deg, #101c3a, #174c75);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 40px 20px;
-        }
+    min-height: 85vh;
+    background: linear-gradient(135deg, #101c3a, #174c75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+/* PHOTO EN FILIGRANE */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url('./images/photo2.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    opacity: 0.13;
+    z-index: 0;
+}
+
+/* TEXTE AU-DESSUS DE LA PHOTO */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+            
+        
 
         .hero-content h1 {
             font-size: 48px;
@@ -290,7 +360,32 @@
 
         </div>
     </section>
+<!-- MA GALERIE -->
+<section class="galerie" id="galerie">
 
+    <h2 class="section-title">Mon univers en images</h2>
+
+    <p class="galerie-intro">
+        Quelques souvenirs et moments qui racontent mon histoire.
+    </p>
+
+    <div class="galerie-container">
+
+        <div class="photo-card">
+            <img src="images/photo2.jpeg"
+                 alt="Photo personnelle de Gloria">
+            <h3>Un moment de ma vie</h3>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/photo3.jpeg"
+                 alt="Souvenir de Gloria">
+            <h3>Mes beaux souvenirs</h3>
+        </div>
+
+    </div>
+
+</section>
     <!-- OBJECTIFS -->
     <section class="objectifs" id="objectifs">
         <h2 class="section-title">Mes ambitions</h2>
